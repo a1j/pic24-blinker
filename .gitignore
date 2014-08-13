@@ -7,16 +7,16 @@
 *.o
 *.sdb
 *.obj.dmp
-html/
-nbproject/private/
-nbproject/Package-*.bash
-build/
-nbbuild/
-dist/
-nbdist/
-nbactions.xml
-nb-configuration.xml
-funclist
-nbproject/Makefile-*
-disassembly/
+PIC24F Blinker.X/html/
+PIC24F Blinker.X/nbproject/private/
+PIC24F Blinker.X/nbproject/Package-*.bash
+PIC24F Blinker.X/build/
+PIC24F Blinker.X/nbbuild/
+PIC24F Blinker.X/dist/
+PIC24F Blinker.X/nbdist/
+PIC24F Blinker.X/nbactions.xml
+PIC24F Blinker.X/nb-configuration.xml
+PIC24F Blinker.X/funclist
+PIC24F Blinker.X/nbproject/Makefile-*
+PIC24F Blinker.X/disassembly/
 *.map
