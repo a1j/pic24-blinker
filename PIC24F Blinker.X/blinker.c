@@ -107,9 +107,11 @@ void __attribute__((__interrupt__,__auto_psv__)) _T1Interrupt(void) {
     else {
         if (context.led_on == 1 ) {
             context.timer = OFF_TIME;
+            context.led_on = 0;
             LED_OFF();
         } else {
             context.timer = ON_TIME;
+            context.led_on = 1;
             LED_ON();
         }
     }    
