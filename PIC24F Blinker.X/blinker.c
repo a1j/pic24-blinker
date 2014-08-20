@@ -102,7 +102,6 @@ void __attribute__((__interrupt__,__no_auto_psv__)) _StackError(void) {
 }
 
 void __attribute__((__interrupt__,__auto_psv__)) _T1Interrupt(void) {
-    static int sticks=0;
     if (context.timer > 0)
         context.timer -= 1; /* decrement it */
     else {
@@ -113,8 +112,7 @@ void __attribute__((__interrupt__,__auto_psv__)) _T1Interrupt(void) {
             context.timer = ON_TIME;
             LED_ON();
         }
-    }
-    
+    }    
     IFS0bits.T1IF = 0; /* clear interrupt flag */
     return;
 }
