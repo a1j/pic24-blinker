@@ -37,8 +37,8 @@ _CONFIG3
 //  RTCOSC_LPRC           //RTCC Source
 //)
 
-/* Timer1 period for 1 ms with FOSC = 4 MHz */
-#define TMR1_PERIOD 0x03E8
+/* Timer1 period for 1 ms with FOSC = 16 MHz */
+#define TMR1_PERIOD 0x0FA0
 #define ON_TIME  0x0200
 #define OFF_TIME  0x0400
 #define LED_ON()                (LATD |= (1U << 2))
@@ -128,7 +128,7 @@ int main(int argc, char** argv) {
     initMCU();
     initLed();
     resetTimer();
-    while(1) {}
+    while(1) { asm("PWRSAV #0x0001"); }
     return(0);
 }
 
